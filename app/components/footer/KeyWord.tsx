@@ -3,11 +3,11 @@
 import axios from "axios";
 
 axios
-  .post("/api/customusers/")
+  .get("http://127.0.0.1:8000/api/customusers/")
   .then((response) => {
     // Khi yêu cầu thành công, response chứa thông tin phản hồi từ API
     console.log("Yêu cầu API thành công!");
-    console.log("Dữ liệu sản phẩm:", response.data);
+    console.log("Dữ liệu người dùng:", response.data);
   })
   .catch((error) => {
     // Xử lý trường hợp yêu cầu thất bại
